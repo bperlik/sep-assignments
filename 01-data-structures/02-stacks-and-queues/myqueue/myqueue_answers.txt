@@ -1,0 +1,5 @@
+I would normally build an update queue method to 
+update the head and tail to first and last in order
+to make the code DRYer.
+
+
