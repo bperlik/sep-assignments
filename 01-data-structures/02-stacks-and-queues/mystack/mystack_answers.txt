@@ -1,0 +1,3 @@
+I assumed that I was not to use Ruby array methods shift and unshift, 
+even though it was not explicitly stated.
+
