@@ -1,0 +1,21 @@
+linked-lists-answers
+
+Results of Benchmark Tests
+                                                  user     system      total        real
+Add an item to array 10,000 times               0.000000   0.000000   0.000000 (  0.000745)
+Add an item to end of linked list 10,000 times  0.000000   0.000000   0.000000 (  0.004155)
+Access 5000th element in array                  0.000000   0.000000   0.000000 (  0.000002)
+Access 5000th node in linked list               0.010000   0.000000   0.010000 (  0.000393)
+Remove 5000th element in array                  0.000000   0.000000   0.000000 (  0.000007)
+Remove 5000th node in linked list               0.000000   0.000000   0.000000 (  0.000773)
+
+1) Spacial locality is the relative location of data of a collection.
+
+Spacial locality is a large time factor when dealing with big data sets that require large
+memory blocks with large expansion room which is inefficient and can cause crashes. Smaller or static 
+data collections may be more effience in an array stored in a linear fashion. My guess here is that someone
+has invented code to mix the two, that is, do subset arrays as linked lists.
+
+2) Benchmark of array vs linked list indicates that arrays have a higher performance for data sets of this size in Ruby.
+Note that Ruby uses an array of arrays to store linked lists.
+

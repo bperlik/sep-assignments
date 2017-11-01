@@ -1,8 +1,8 @@
-## A line of people at an amusement park ride
-* The line is composed of members, represented by strings
-* There sa a front and back of the line.
-* A new person enters the line at the back.
-* A member of the line can exit at any time, and those behind move up to take their place.
+A line of people at an amusement park ride
+The line is composed of members, represented by strings
+There is a front and back of the line.
+A new person enters the line at the back.
+A member of the line can exit at any time, and those behind move up to take their place.
 
 1. A class that creates an array with several methods
 * The class Line has six methods, a special type of queue
@@ -20,7 +20,7 @@
 3. Good for most simple lines without grouping, such as grocery checkout,
     new apple iphones waiting line, open-seating event ticket sales.
 
-## Pixels on a computer screen
+ Pixels on a computer screen
 * Screen has width and height
 * Screen contains Pixels.
 * Pixel = three color values RGB
@@ -31,12 +31,12 @@
 
 1. Since Ruby doesn't support a two-dimensional array, we used a array of arrays
    Screen class is the outer array and Pixel class is the sub array
-* Screen               class with (width,height)
+*  Screen               class with (width,height)
 *   .insert(pixel, x, y)  screen method with pixel, width/height location
 *   .at(x,y)              location at width, height
 *   .inbounds(x, y)       checks whether location is inside screen area
 *
-* Pixel                class with red value, green value, blue value, width, and height
+*  Pixel                class with red value, green value, blue value, width, and height
 *    .validate_color(color) if color value is more than 255, defaults to 255
 *                           and if value less than zero, defaults to zero.
 
