@@ -1,0 +1,27 @@
+Explanation of why doubling the size of the underlying array of HashClass may be a poor idea
+
+1) Doubling the size of the area increase the number of open slots in the array for potential
+values which may lead to more fraqmentation
+2) Doubling the size of an array (which allocates memory) is a slow operation
+
+My results for the hash size tests indicate for small arrays (6-12), doubling is efficient,
+but as the arrays get larger the doubling becomes asymptotal, which will cause
+slowdowns during each resize and possible crash if size exceeded available memory.
+
+Title                                                Duration             Hash size
+
+The Hobbit: An Unexpected Journey                    3 hours, 2 minutes   Hash: 19
+The Lord of the Rings: The Fellowship of the Ring    3 hours, 48 minutes  Hash: 17
+The Hobbit: The Desolation of Smaug                  3 hours, 7 minutes   Hash: 16
+The Hobbit: The Battle of Five Armies                2 hours, 44 minutes  Hash: 8
+The Lord of the Rings: The Return of the King        3 hours, 21 minutes  Hash: 5
+The Lord of the Rings: The Two Towers                3 hours, 55 minutes  Hash: 4
+
+I would think that someone could write an algorithm that uses the history of collisions
+ (how many occur, how often) and increase the size in a more efficient manner
+ to minimize the number of collisions, recalculations, and memory requirements.
+
+Actually, I already read somewhere that Ruby stores an array at the collision pointer
+with up to six items before resizing.
+
+
