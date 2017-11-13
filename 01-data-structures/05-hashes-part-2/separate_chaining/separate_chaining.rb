@@ -1,3 +1,4 @@
+require_relative 'node'
 require_relative 'linked_list'
 
 class SeparateChaining
@@ -9,10 +10,10 @@ class SeparateChaining
   end
 
   def []=(key, value)
-    node = Node.new(key,value)
+    node = Node.new(key, value)
     i = index(key, self.size)
     if @lists[i].nil?
-      list = LikedList.new
+      list = LinkedList.new
       list.add_to_tail(node)
       @lists[i] = list
     elsif @lists[i].size < 5
@@ -29,7 +30,7 @@ class SeparateChaining
   def [](key)
     i = index(key, self.size)
     if !@lists[i].nil?
-      node = @lists[i].locate_node(key)
+      node = @lists[i].find_node(key)
       if !node.value.nil?
         return node.value
       end
@@ -43,15 +44,15 @@ class SeparateChaining
     key.sum % size
   end
 
-  # Calculate the current load factor
+  # Calculate the current load factor = n/k
   def load_factor
     x = 0.0
-    for i in 0...self.size-1
+    for i in 0..self.size-1
       if !@lists[i].nil?
         x += @lists[i].size
       end
     end
-    x/self.size
+    x / self.size
   end
 
   # Simple method to return the number of items in the hash
@@ -74,7 +75,7 @@ class SeparateChaining
   def print_hash
     for i in 0..self.size-1
       if !@lists[i].nil?
-        @lists[]i].print(i)
+        @lists[i].print(i)
       end
     end
   end
