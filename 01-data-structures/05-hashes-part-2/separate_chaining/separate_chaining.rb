@@ -46,13 +46,23 @@ class SeparateChaining
 
   # Calculate the current load factor = n/k
   def load_factor
-    x = 0.0
-    for i in 0..self.size-1
-      if !@lists[i].nil?
-        x += @lists[i].size
+    node_count = 0.0
+    @lists.each do |list|
+      if list!= nil
+        current_node = list.head
+        while current_node != nil
+          node_count += 1
+          current_node = current_node.next
+        end
       end
     end
-    x / self.size
+    @max_load_factor = (node_count / @lists.size)
+    if @max_load_factor > 0.70
+      self.resize
+      self.load_factor
+    else
+      @max_load_factor
+    end
   end
 
   # Simple method to return the number of items in the hash

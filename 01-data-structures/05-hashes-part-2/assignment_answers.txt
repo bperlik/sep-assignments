@@ -1,0 +1,26 @@
+Describe three collision resolution strategies not mentioned here.
+
+1) Robin Hood hashing: A variation on double-hashing collision where the criterion for bumping
+ a key does not depend on direct relationship between keys.
+2) Hopscotch hashing : Combines cuckoo hashing and linear probing, to avoid their limitations,
+ works well even when load factor grows past 0.9
+3) NFO (Nimbe-Opoku-Frimpong) collision strategy: based on a multi-dimensional array,
+which minimizes the empty spaces with a slight expense of space.
+4) FKS Scheme (Fredman, Komlox and Szemeredi) a two tiered hash table, keys are hashed twice,
+the seond hash value gives the position of the entry in the budket's second-level hash table,
+but the look up cost is the in the worst case.
+5) Cache-Conscious Collision Resolution : only for large sets of strings, strings are are assumed to have
+sequences of 8-bit bytes, and a char of null is available as a terminator. This eliminates the
+chain altogether and stores the strings in a contiguous array. I think this is important to notice
+that (as my mentor has said many times) context counts. Some data may lead to a fairly simple solution.
+
+Create your own collision resolution strategy and describe how it works.
+
+I wonder if using a timestamp and user id for the hash, in addition to the TSA hash, reducing the risk of attasks by
+repeated submission, also reducing clustering and memory, at the expense of more calculation.
+
+I'd prefer to write a ruby gem to analyse the data in a current database, offer security settings,
+optimization priorities, and expected activity frequency (mostly adds, deletes, updates, bulk adds?) and then
+choose among a library of hash strategies to automatically invoke that strategy. Also have settings for
+automatic review of data, fraqmentation, performance, and activity, to further optimize and data and use may change. DYNO-HASH is born.
+
