@@ -1,0 +1,35 @@
+1. Print both Trees to the console and compare the difference between your Binary Search Tree and your Heap.
+
+  Binary Search Tree
+
+The Wizard of Oz: 95
+Star Wars: Return of the Jedi 94
+Mad Max: The Fury Road 97
+Star Wars: The Force Awakens 93
+Groundhog: 96
+The Matrix 98
+Star Wars: The Empire Fights Back 92
+Ghostbusters 99
+Star Wars: A New Hope 90
+The Terminator 100
+Mad Max 2: The Road Warrior 89
+Back to the Future 91
+Young Frankenstein 87
+
+   Min Heap
+
+2. Insert all numbers from 1 to 100,000 into both Trees,
+   then use Benchmark to compare the performance:
+
+AVERAGE INSERTION TIME
+
+
+FINDING 50,000 TIME
+
+
+AVERAGE DELETION TIME
+
+
+3. When would you use Binary Search Tree and why?
+
+4. When would you use a Heap instead and why?

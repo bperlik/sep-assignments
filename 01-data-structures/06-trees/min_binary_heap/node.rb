@@ -1,5 +1,4 @@
-class Node
-
+Class Node
   attr_accessor :title
   attr_accessor :rating
   attr_accessor :left
@@ -9,7 +8,7 @@ class Node
     @title = title
     @rating = rating
     @left = nil
-    @right = nil
+    @right =nil
   end
 
 end
