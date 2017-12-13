@@ -9,21 +9,21 @@ class BinarySearchTree
   end
 
   def insert(root, node)
-    newData= root
+    new_data= root
     while new_data
-      if node.rating < newData.rating
-        if newData.left
-          newData = newData.left
+      if node.rating < new_data.rating
+        if new_data
+          new_data = new_data.left
         else
-          newData.left = node
+          new_data.left = node
           break
         end
       end
-      if node.rating > newData.rating
-        if newData.right
-          newData = newData.right
+      if node.rating > new_data.rating
+        if new_data.right
+          new_data = new_data.right
         else
-          newData.right = node
+          new_data.right = node
           break
         end
       end

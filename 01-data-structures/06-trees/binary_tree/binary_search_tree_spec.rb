@@ -3,20 +3,19 @@ include RSpec
 require_relative 'binary_search_tree'
 
 RSpec.describe BinarySearchTree, type: Class do
-  let (:root) { Node.new("The Wizard of Oz", 95) }
+  let (:root) { Node.new("The Wizard of Oz", 87) }
   let (:tree) { BinarySearchTree.new(root) }
-  let (:mad_max) { Node.new("Mad Max: Fury Road", 97) }
-  let (:matrix) { Node.new("The Matrix", 98) }
-  let (:jedi) { Node.new("Star Wars: Return of the Jedi", 94) }
-  let (:force_awakens) { Node.new("Star Wars: The Force Awakens", 93) }
-  let (:empire) { Node.new("Star Wars: The Empire Strikes Back", 92) }
-  let (:ghostbusters) { Node.new("Ghostbusters", 99) }
-  let (:groundhog) { Node.new("Groundhog Day", 96) }
-  let (:hope) { Node.new("Star Wars: A New Hope", 90) }
-  let (:back) { Node.new("Back to the Future", 91) }
-  let (:mad_max_2) { Node.new("Mad Max 2: The Road Warrior", 89) }
-  let (:terminator) { Node.new("The Terminator", 100) }
-  let (:young) { Node.new("Young Frankenstein", 87) }
+  let (:mad_max) { Node.new("Mad Max: Fury Road", 72) }
+  let (:matrix) { Node.new("The Matrix", 78) }
+  let (:jedi) { Node.new("Star Wars: Return of the Jedi", 80) }
+  let (:force_awakens) { Node.new("Star Wars: The Force Awakens", 85) }
+  let (:empire) { Node.new("Star Wars: The Empire Strikes Back", 86) }
+  let (:ghostbusters) { Node.new("Ghostbusters", 90) }
+  let (:groundhog) { Node.new("Groundhog Day", 91) }
+  let (:hope) { Node.new("Star Wars: A New Hope", 92) }
+  let (:back) { Node.new("Back to the Future", 93) }
+  let (:mad_max_2) { Node.new("Mad Max 2: The Road Warrior", 94) }
+  let (:terminator) { Node.new("The Terminator", 98) }
 
   describe "#insert(data)" do
     it "properly inserts a new node as a left child" do
@@ -115,7 +114,7 @@ RSpec.describe BinarySearchTree, type: Class do
 
   describe "#printf" do
      specify {
-       expected_output = "The Wizard of Oz: 87\nStar Wars: Return of the Jedi: nStar Wars: A New Hope: 93\n"
+       expected_output = "The Wizard of Oz: 87\nStar Wars: Return of the Jedi: 94\nStar Wars: A New Hope: 93\n"
        tree.insert(root, )
        tree.insert(root, )
        tree.insert(root, )
@@ -143,5 +142,6 @@ RSpec.describe BinarySearchTree, type: Class do
        tree.insert(root, )
        expect { tree.printf }.to output(expected_output).to_stdout
      }
+   end
   end
 end

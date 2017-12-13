@@ -1,35 +1,64 @@
 1. Print both Trees to the console and compare the difference between your Binary Search Tree and your Heap.
 
-  Binary Search Tree
+BST:
 
-The Wizard of Oz: 95
-Star Wars: Return of the Jedi 94
-Mad Max: The Fury Road 97
-Star Wars: The Force Awakens 93
-Groundhog: 96
-The Matrix 98
-Star Wars: The Empire Fights Back 92
-Ghostbusters 99
-Star Wars: A New Hope 90
-The Terminator 100
-Mad Max 2: The Road Warrior 89
-Back to the Future 91
-Young Frankenstein 87
+The Wizard of Oz: 87
+Star Wars: Return of the Jedi: 80
+Back to the Future: 93
+Mad Max: Fury Road: 72
+Star Wars: The Empire Strikes Back: 86
+Star Wars: A New Hope: 92
+Mad Max 2: The Road Warrior 94
+The Matrix: 78
+Groundhog Day: 91
+Terminator: 98
+Ghostbusters: 90
 
-   Min Heap
+MBH:
+
+Mad Max: Fury Road : 72
+The Matrix: 78
+Star Wars: Return of the Jedi: 80
+Star Wars: The Force Awakens: 85
+Star Wars: The Empire Strikes Back: 86
+The Wizard of Oz 87
+Ghostbusters: 90
+Groundhog Day: 91
+Star Wars: A New Hope: 92
+Back To The Future: 93
+Mad Max 2: The Road Warrior 94
+Terminator: 98
 
 2. Insert all numbers from 1 to 100,000 into both Trees,
    then use Benchmark to compare the performance:
 
+                                         user       system      total      real
+
+Binary Search Tree:                  0.000000   0.000000   0.000000 (  0.000007)
+Min Binary Heap:                     0.000000   0.000000   0.000000 (  0.000011)
+Binary Search Tree insert 10k:       5.720000   0.030000   5.750000 (  5.783683)
+Min Binary Heap insert 10k:          0.010000   0.000000   0.010000 (  0.013094)
+Binary Search Tree find node 5k:     0.000000   0.000000   0.000000 (  0.001715)
+Min Binary Heap find node 5k:        0.000000   0.000000   0.000000 (  0.000551)
+Binary Search Tree delete node 5k:   0.010000   0.000000   0.010000 (  0.002121)
+Min Binary Heap delete node 5k:      0.000000   0.000000   0.000000 (  0.000742)
+
 AVERAGE INSERTION TIME
+In this example, the Heap is much faster in insertion due to the data being in order.
+Randomized data would not produce the same results.
 
-
-FINDING 50,000 TIME
-
+AVERAGE SEARCH TIME
+In this example, the Heap is a little faster, due to the type of search and the data.
 
 AVERAGE DELETION TIME
-
+In this example, the Heap is much faster, due to the data being in order.
 
 3. When would you use Binary Search Tree and why?
+I would use it for applications where data is constantly being inserted and removed,
+ such as large datasets, such as library books checked in/out of a library.
 
 4. When would you use a Heap instead and why?
+I would use it for small data sets or data sets that are in order, priority queues,
+scheduling operations, such as Emergency Room triage patients into a queue,
+video games, aircraft to land at airports.
+

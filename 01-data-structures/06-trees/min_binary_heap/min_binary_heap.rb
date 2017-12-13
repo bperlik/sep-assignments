@@ -1,7 +1,6 @@
 require_relative 'node'
 
 class MinBinaryHeap
-
   attr_reader :items
 
   def initialize(node=nil)
@@ -17,9 +16,7 @@ class MinBinaryHeap
 
   def sort(node_index)
     return if node_index == 0
-
     parent_index = parent(node_index)
-
     if @items[node_index].rating < @items[parent_index].rating
       swap(node_index, parent_index)
       sort(parent_index)
@@ -28,7 +25,6 @@ class MinBinaryHeap
 
   def find(data)
     node = nil
-
     @items.each do |item|
       if item.title == data
         node = item
@@ -71,6 +67,7 @@ class MinBinaryHeap
     left = left_or_right_index(node_index, "left")
     right = left_or_right_index(node_index, "right")
     return if !left && !right
+
     lowest = left
     lowest = right if left && right && @items[left].rating > @items[right].rating
 
