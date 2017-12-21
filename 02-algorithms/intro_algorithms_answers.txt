@@ -1,0 +1,66 @@
+1. Using proper pseudo-code, describe three or more primitive algorithms used in your day-to-day life.
+   1)  baking rum cake
+         prepare mise-en-place
+           check_available_amount( each ingredient)
+             if not available
+                 choose another recipe(break, end program)
+              if available
+                 measure_into_separate_bowls (ingredient)
+         turn on oven and set_temp(325F)
+         locate pan(type = bundt, size = 11")
+         add and whisk (dry ingredients, large bowl)
+         add and whisk (wet ingredients, medium bowl)
+         add and whisk (dry ingredients, medium bowl)
+         add wet mixturet to dry mixture
+         stir (10 strokes)
+          while dry ingredientsi NOT incorporated?
+            stir (10 strokes)
+         fill pans (method= scoop, pan= prepared pan, fill_level=3/4)
+         bake (method- insert into oven, pan = filled pan, duration = 25-30 minutes)
+           check_doneness(toothpick, filled_pan)
+             done?
+                remove (pan, oven, cooling rack)
+             not done?
+                continue baking (pan, oven)
+                set timer (5 minutes)minutes
+                loop back to check doneness
+        cool(rack, time=10 minutes)
+
+   2)   going for hike on Appalachian Trail
+          is check_weather_forecast == suitable and spare_time == time_required_for_hike
+             no
+                choose another activity(break, end program)
+             yes
+                prepare for hike
+                  choose clothes to match weather conditions (separate module!)
+                  change clothes to weather appropriate outdoor wear [pants, shirt, jacket, socks, hiking boots, hat]
+                  locate daypack
+                  check contents [house_keys, first_aid_kit, compass, map, flashlight, bear spray, emergency kit, water_bottle]
+                  fill water bottle (bottle, water)
+                  plan route to meet time allowed (gps, time, fitness)
+             don daypack(daypack)
+             grab phone and portable gps (phone, gps)
+             feed cat (call separate module)
+             walk outside
+             lock door(keys)
+             turn (right at end of driveway)
+             walk (1/4 mile)
+
+ 3)  feed cat
+       if cat_food == in_pantry?
+        false
+          go to store and buy some or you won't get any sleep tonight
+        true
+          select (can from pantry)
+          open (can)
+          dump (can, clean cat bowl)
+          command_cat (sit)
+          place (bowl, tray)
+          rinse (empty_can)
+          toss (empty_can, garbage_bin)
+          if cat = doesn't eat
+             curse (spoiled_cat)
+          else
+             feel_blessed
+      end
+
