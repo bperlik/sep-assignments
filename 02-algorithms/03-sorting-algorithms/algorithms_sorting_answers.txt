@@ -1,0 +1,23 @@
+Benchmark on sorting 50 items
+                 user     system      total        real
+Quick Sort:   0.000000   0.000000   0.000000 (  0.000208)
+Heap Sort:    0.000000   0.000000   0.000000 (  0.000432)
+Bucket Sort:  0.000000   0.000000   0.000000 (  0.000102)
+
+The graph shows that the bucket sort was much faster than the heap sort.
+The quick sort was about half as fast as the bucket sort.
+but this is only 50 items, with a larger number and unknown size of array
+the bucket sort would be much less efficient.
+
+Benchmark on sorting 100,000 items
+                 user     system      total        real
+Quick Sort:   0.531000   0.000000   0.531000 (  0.536589)
+Heap Sort:    0.563000   0.000000   0.563000 (  0.559279)
+Bucket Sort:  4.891000   5.969000  10.860000 ( 10.892013)
+
+Now, we see a great difference in the bucket sort time,
+the quick sort has a bit faster than the heap sort.
+Most applications will have more than 50 elements in an array,
+quick sort is the better choice for large arrays.
+The divide and conquer methodology applied to a random array,
+is more efficient in this context.

@@ -1,0 +1,48 @@
+Using proper pseudo-code, describe three or more primitive algorithms used in your day-to-day life. 
+
+1. Pseudocode for Feeding cat
+
+  If no food in pantry
+    (Drive to store && Buy cat food) or (don’t get sleep)
+   Else
+     Open(can)
+     Dump(can, clean bowl)
+     Command_cat_to_sit
+     If cat sits
+       Place bowl in cat tray
+     Else
+       Recursive: Command_cat_to_sit
+     End If
+  End If
+End program
+
+2  Pseudocode For Warming Car for trip
+
+  Locate remote starter for car
+  Press-button (style=briefly, times=2)
+  If fob glows
+     (car started)
+  Else
+    Recursive: Press-button(briefly,2)
+  End If
+End program
+
+3.  whiskey-tasting
+  Define rating [1..10]
+  Define location = “front”
+  Define whiskey_stock hash (name: [age, rating, location]) 
+  For each whiskey
+    pour_whiskey(name)
+    Get rating
+    store whiskey(name: rating)
+    If rating greater than 7
+      Assign “back” to location
+    Else if rating greater than 4
+      Assign “middle” to location
+    else
+      Assign “Front” to location
+     End If
+  End for loop
+End program
+
+
