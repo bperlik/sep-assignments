@@ -1,0 +1,238 @@
+What's the Big-O of the following algorithms.
+Show work and reasoning.
+
+1.goodbye_world.rb
+   def goodbye_world(n)
+     puts "Goodbye World! #{n}"
+   end
+
+O(1) = Constant time to complete, no matter what n happens to be.
+
+2.find_largest.rb
+    def find_largest(collection)
+      largest = collection[0]
+      collection.length.times do |i|
+      if collection[i] >= largest
+        largest = collection[i]
+      end
+    end
+    largest
+  end
+
+O(n) = Linear complexity. The entire array would need to be searched  dependent on size, n.
+
+3. find_largest_2D_array.rb
+   def find_largest(collection)
+     largest = collection[0][0]
+      collection.length.times do |i|
+        subcollection = collection[i]
+        subcollection.length.times do |i|
+          if subcollection[i] >= largest
+            largest = subcollection[i]
+          end
+        end
+      end
+    largest
+   end
+
+O(n^2)   Quadratic because there are two for loops that enumerate all pairs of positions.
+Horrible way to go thru a 2D collection, a binary search  would reduce it to O(n logn) .
+
+4. numbers_recursive.rb
+   def numbers(n)
+     if (n == 0)
+       return 0
+     elsif (n == 1)
+       return 1
+     else
+       return numbers(n-1) + numbers(n-2)
+     end
+   end
+
+O(2^n). Exponential Complexity As n increases in size the number of operations increase exponentially
+because each increase in n acts like an additional layer.
+
+5. numbers_iterative.rb
+   def iterative(n)
+     num1 = 0
+     num2 = 1
+
+     i = 0
+     while i < n-1
+       tmp = num1 + num2
+       num1 = num2
+       num2 = tmp
+       i+=1
+     end
+
+    num2
+  end
+
+O(n) Linear, it completes at n-1, dependent directly on size of n.
+
+6.
+sort.rb
+def sort(collection, from=0, to=nil)
+ if to == nil
+   # Sort the whole collection, by default
+   to = collection.count - 1
+ end
+
+ if from >= to
+   # Done sorting
+   return
+ end
+
+ # Take a pivot value, at the far left
+ pivot = collection[from]
+
+ # Min and Max pointers
+ min = from
+ max = to
+
+ # Current free slot
+ free = min
+
+ while min < max
+   if free == min # Evaluate collection[max]
+     if collection[max] <= pivot # Smaller than pivot, must move
+       collection[free] = collection[max]
+       min += 1
+       free = max
+     else
+       max -= 1
+     end
+   elsif free == max # Evaluate collection[min]
+     if collection[min] >= pivot # Bigger than pivot, must move
+       collection[free] = collection[min]
+       max -= 1
+       free = min
+     else
+       min += 1
+     end
+   else
+     raise "Inconsistent state"
+   end
+ end
+
+ collection[free] = pivot
+
+ sort collection, from, free - 1
+ sort collection, free + 1, to
+
+ collection
+end
+
+O(n) Linear, it completes at n-1, dependent directly on size of n.
+
+6.
+sort.rb
+def sort(collection, from=0, to=nil)
+ if to == nil
+   # Sort the whole collection, by default
+   to = collection.count - 1
+ end
+
+ if from >= to
+   # Done sorting
+   return
+ end
+
+ # Take a pivot value, at the far left
+ pivot = collection[from]
+
+ # Min and Max pointers
+ min = from
+ max = to
+
+ # Current free slot
+ free = min
+
+ while min < max
+   if free == min # Evaluate collection[max]
+     if collection[max] <= pivot # Smaller than pivot, must move
+       collection[free] = collection[max]
+       min += 1
+       free = max
+     else
+       max -= 1
+     end
+   elsif free == max # Evaluate collection[min]
+     if collection[min] >= pivot # Bigger than pivot, must move
+       collection[free] = collection[min]
+       max -= 1
+       free = min
+     else
+       min += 1
+     end
+   else
+     raise "Inconsistent state"
+   end
+ end
+
+ collection[free] = pivot
+
+ sort collection, from, free - 1
+ sort collection, free + 1, to
+
+ collection
+end
+
+O(n) Linear, it completes at n-1, dependent directly on size of n.
+
+6.
+sort.rb
+def sort(collection, from=0, to=nil)
+ if to == nil
+   # Sort the whole collection, by default
+   to = collection.count - 1
+ end
+
+ if from >= to
+   # Done sorting
+   return
+ end
+
+ # Take a pivot value, at the far left
+ pivot = collection[from]
+
+ # Min and Max pointers
+ min = from
+ max = to
+
+ # Current free slot
+ free = min
+
+ while min < max
+   if free == min # Evaluate collection[max]
+     if collection[max] <= pivot # Smaller than pivot, must move
+       collection[free] = collection[max]
+       min += 1
+       free = max
+     else
+       max -= 1
+     end
+   elsif free == max # Evaluate collection[min]
+     if collection[min] >= pivot # Bigger than pivot, must move
+       collection[free] = collection[min]
+       max -= 1
+       free = min
+     else
+       min += 1
+     end
+   else
+     raise "Inconsistent state"
+   end
+ end
+
+ collection[free] = pivot
+
+ sort collection, from, free - 1
+ sort collection, free + 1, to
+
+ collection
+end
+
+0(n^2) Quadratic complexity. A quicksort with recursions.
+The target element could be the last element on either side of the pivot.
+
