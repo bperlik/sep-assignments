@@ -1,0 +1,26 @@
+Big-O (worst case complexity) of each version of poorly_written_ruby.rb
+Version One - fewer iterations:       O(n^2)
+
+Version Two - merge sort:             O(n logn)
+
+Version Three - bsearch - quicksort:  O(n logn) most of the time, rarely O(n^2)
+
+                                    user     system      total        real
+
+10 items rand 1 to 30
+Poorly Written Ruby (Original):   0.000000   0.000000   0.000000 (  0.000004)
+Code Optimized (Reduced Code):    0.000000   0.000000   0.000000 (  0.000002)
+Time Optimized (MergeSort):       0.000000   0.000000   0.000000 (  0.000005)
+Space Optimized (Bsearch):        0.000000   0.000000   0.000000 (  0.000002)
+
+1000 items, rand 1 to 250000
+Poorly Written Ruby (Original):   0.000000   0.000000   0.000000 (  0.000006)
+Code Optimized (Reduced Code):    0.000000   0.000000   0.000000 (  0.000004)
+Time Optimized (MergeSort):       0.000000   0.000000   0.000000 (  0.000003)
+Space Optimized (Bsearch):        0.000000   0.000000   0.000000 (  0.000004)
+
+100,000 items, rand 1 to 25,000,000
+Poorly Written Ruby (Original):   0.000000   0.000000   0.000000 (  0.000003)
+Code Optimized (Reduced Code):    0.010000   0.000000   0.010000 (  0.000003)
+Time Optimized (MergeSort):       0.000000   0.000000   0.000000 (  0.000004)
+Space Optimized (Bsearch):        0.000000   0.000000   0.000000 (  0.000004)
