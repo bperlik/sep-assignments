@@ -1,0 +1,33 @@
+ANSWERS FOR 01-DATABASES: INTRODUCTION
+
+For each of these skills,
+      a) write pseudo-code (like the post = Post.all.first example above)
+       to demonstrate how your application might perform these tasks through an ORM
+      b) also write a corresponding SQL statement.
+
+1. remove duplicates in a query response
+   a) DISTINCT = unique value
+   b) SELECT DISTINCT column_name FROM table_name WHERE column_name LIKE '%j%'
+2. filter records using inequalities, pattern matching, ranges, and boolean logic
+   a) WHERE = include if this condition is true
+   b) SELECT * FROM tablename WHERE this_column [NOT] LIKE 'pattern'
+3. sort records in a particular order
+   a) ORDER BY = tablename.column.sort
+   b) SELECT * FROM tablename ORDER BY column1 ASC/DESC;
+4. limit the number of records returned
+   a) TOP <= array.index-1
+   b) SELECT TOP number FROM table_name WHERE condition;
+5. group records into sections
+   a) GROUP BY = column_name condition is true
+   b) SELECT column_name FROM table_name WHERE condition
+      GROUP BY column_name;
+6. perform calculations using aggregate functions
+   a) SUM = column_name.value.each do |value| sum += value
+   b) SELECT column_name SUM (total_name) FROM column_name GROUP BY column_name;
+7. join tables using cross join, inner join, and outer join
+   a) JOIN = class1.instance.column_name meets condition amend instance
+      with class2.instance.columna_name and class2.instance.column_data
+   b) SELECT column_name FROM table1
+      INNER JOIN table2 ON table1.column_name = table2.column_name;
+
+
